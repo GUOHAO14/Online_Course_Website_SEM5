@@ -1,0 +1,142 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+main {
+  display: flex;
+  flex-direction: row;
+}
+
+section.edit_course {
+  display: flex;
+  flex-direction: column;
+}
+
+div.title {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 10px;
+}
+
+div.title, h1 {
+  font-size: 36px;
+  color: #333;
+  margin: 0.5rem;
+}
+
+button {
+  padding: 12px 24px;
+  border: none;
+  border-radius: 8px;
+  background-color: rgb(84 0 200);
+  color: #ffffff;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: rgb(65 31 111);
+}
+
+button:active {
+  transform: scale(0.95);
+}
+
+form.file_detail {
+  align-self: center;
+  position: relative;
+  padding: 20px;
+  width: 100%;
+  max-width: 800px;
+}
+
+div.manage_file {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  left: 100%;
+  gap: 10px;
+}
+
+button.manage_file_btn {
+  border: 1px solid black;
+  width: 30px;
+  height: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: red;
+}
+
+div.file_title {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 20px;
+}
+
+input.file_name {
+  font-weight: bold;
+  width: auto;
+  padding: 15px;
+  font-size: 22px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  margin: 0.5rem;
+  background-color: #f9f9f9;
+  transition: border-color 0.3s;
+}
+
+input.file_desc {
+  font-weight: bold;
+  width: auto;
+  padding: 10px;
+  font-size: 15px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  margin: 0.5rem;
+  background-color: #f9f9f9;
+  transition: border-color 0.3s;
+}
+
+div.content_area {
+  margin-top: 20px;
+}
+
+button#submit_btn {
+  background-color: #007bff;
+}
+
+button#submit_btn:hover {
+  background-color: #0069d9;
+  transform: translateY(-2px);
+}
+
+button#submit_btn:active {
+  background-color: #005cbf;
+  transform: translateY(1px);
+}
+
+button#submit_btn:disabled {
+  background-color: #cce5ff;
+  color: #6c757d;
+  cursor: not-allowed;
+}
+
+button.manage_file_btn:hover {
+  background-color: #d32f2f;
+  transform: translateY(-2px);
+}
+
+button.manage_file_btn:active {
+  background-color: #b71c1c;
+  transform: translateY(1px);
+}
+
+button.manage_file_btn:disabled {
+  background-color: #f5c6cb;
+  color: #6c757d;
+  cursor: not-allowed;
+}

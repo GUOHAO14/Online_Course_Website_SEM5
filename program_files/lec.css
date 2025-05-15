@@ -1,0 +1,275 @@
+* {
+    margin: 0px;
+    padding: 0px;
+}
+
+
+main {
+    display: flex;
+    flex-direction: row;
+}
+
+section.sidebar, section.edit_course{
+    display: flex;
+    flex-direction: column;
+}
+
+section.sidebar {
+    width: 15%;
+    background-color: white;
+    height: 100vh;
+}
+
+div.hide {
+    padding: 20px;
+    cursor: pointer;
+    font-size: 20px;
+}
+
+div.file {
+    padding: 20px 15px;
+    cursor: pointer;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+img.move_file {
+    display: flex;
+}
+
+p.filename_side{
+    display: flex;
+    font-size: 22px;
+    margin-left: 10px;
+}
+
+div.popup_wrap {
+    position: relative;
+    display: inline-block;
+    margin-left: auto;
+}
+
+img.more_file {
+    margin-left: auto;
+}
+
+div.subfile {
+    padding: 20px 15px;
+    cursor: pointer;
+    display: none;
+    flex-direction: row;
+    align-items: center;
+}
+
+p.subfilename_side{
+    font-size: 20px;
+    margin-left: 8px;
+}
+
+div.file_popup, div.subfile_popup {
+    position: absolute;
+    bottom: 100%;
+    left: 100%;
+    display: none;
+    z-index: 1000;
+    background-color: aquamarine;
+}
+
+div.more_option {
+    border: 2px solid black;
+    cursor: pointer;
+    text-align: center;
+}
+
+div.add_file {
+    padding: 20px 15px;
+    cursor: pointer;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+div.add_subfile {
+    padding: 20px 15px;
+    cursor: pointer;
+    display: none;
+    flex-direction: row;
+    align-items: center;
+}
+
+section.edit_course {
+    padding: 20px;
+    flex-grow: 1;
+    background-color: cyan;
+}
+
+div.title {
+    display: flex;
+    flex-direction: row;
+}
+
+button.back {
+    border-radius: 15px;
+    border: 3.5px solid black;
+    background-color: white;
+    width: 45px;
+    height: 45px;
+    cursor: pointer;
+}
+
+form.file_detail {
+    align-self: center;
+    background-color: antiquewhite;
+    position: relative;
+}
+
+div.file_title {
+    display: flex;
+    flex-direction: column;
+}
+
+input.file_name {
+    font-size: 40px;
+}
+
+input.file_desc {
+    font-size: 25px;
+}
+
+div.manage_file {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    z-index: 1000;
+    left: 100%;
+}
+
+button.manage_file_btn {
+    border: 1px solid black;
+    background-color: white;
+    width: 30px;
+    height: 30px;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+form.file_input_side, form.subfile_input_side, form.rename_file_form, form.rename_subfile_form{
+    align-self: center;
+    background-color: antiquewhite;
+    display: flex;
+    flex-direction: column;
+}
+
+input.filename_input_side, input.subfilename_input_side, input.rename_file_input, input.rename_subfile_input {
+
+}
+
+label.section_type_side {
+
+}
+
+
+div.content_area {
+
+}
+
+div.quiz_area {
+    display: flex;
+    flex-direction: column;
+}
+
+p.quiz_num {
+
+}
+
+div.quiz_box {
+    margin: 50px 0px;
+    background-color: aquamarine;
+    position: relative;
+}
+
+div.manage_ques {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    z-index: 1000;
+    left: 100%;
+}
+
+button.manage_ques_btn {
+    border: 1px solid black;
+    background-color: white;
+    width: 30px;
+    height: 30px;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+button.add_ques_btn {
+    border: 1px solid black;
+    background-color: white;
+    width: 30px;
+    height: 30px;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+img.move_question {
+    display: flex;
+}
+
+div.ques_title {
+
+}
+
+img.uploaded_image {
+    width: 50px;
+    height: 50px;
+}
+
+input.ques_text {
+
+}
+
+input.ques_photo {
+
+}
+
+div.option_area {
+
+}
+
+input.option_box {
+
+}
+
+button.option_delete {
+
+}
+
+button.add_option {
+    display: flex;
+}
+
+form.create_ques {
+    align-self: center;
+    display: flex;
+    flex-direction: row;
+}
+
+label.input_ques_type {
+
+}
+
+p.stu_ans_box {
+    background-color: white;
+    border: 1px solid black;
+    margin: 20px 0px;
+}

@@ -1,0 +1,184 @@
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f9f9f9;
+  padding: 40px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.step-subtitle {
+  font-size: 18px;
+  margin-bottom: 30px;
+  color: #555;
+}
+.limit {
+  font-size: 14px;
+  margin-bottom: 10px;
+  text-align: center;
+  color: #666;
+}
+
+.limit .min {
+  color: #28a745; /* green */
+  font-weight: 600;
+}
+
+.limit .max {
+  color: #dc3545; /* red */
+  font-weight: 600;
+}
+
+.field-search-bar, .career-search-bar {
+  width: 400px;
+  padding: 10px 15px;
+  margin-bottom: 30px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  font-size: 16px;
+}
+
+.fields-grid-wrapper {
+  overflow: hidden;
+  transition: max-height 0.6s ease;
+  max-height: 1200px;
+}
+
+.fields-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+  max-width: 900px;
+  margin-bottom: 10px;
+}
+
+.field-card, .career-card {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 20px;
+  border: 2px solid #ddd;
+  border-radius: 12px;
+  background-color: white;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-weight: 500;
+  position: relative;
+}
+
+.field-content {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.icon-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 24px;
+  height: 24px;
+  position: relative;
+}
+.icon-wrapper i {
+  position: absolute;
+  top: 0;
+  left: 0;
+  transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+.plus-icon {
+  opacity: 1;
+  transform: scale(1);
+}
+.plus-icon,.check-icon {
+  font-size: 18px;
+  position: relative;
+  padding: 5px;
+  transition: opacity 0.3s ease, transform 0.3s ease;
+}
+.check-icon {
+  opacity: 0;
+  transform: scale(0);
+}
+
+.field-card.selected, .career-card.selected {
+  background-color: #e6f0ff;
+  border-color: #0070f3;
+}
+
+.field-card.selected .plus-icon, .career-card.selected .plus-icon {
+  opacity: 0;
+  transform: scale(0);
+}
+
+.field-card.selected .check-icon, .career-card.selected .check-icon {
+  opacity: 1;
+  transform: scale(1);
+}
+
+.field-card:hover, .career-card:hover {
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.extra-fields {
+overflow: hidden;
+max-height: 0;
+opacity: 0;
+transition: max-height 0.8s ease, opacity 0.8s ease;
+margin-top: 10px;
+}
+
+.extra-fields.show {
+max-height: 1200px; /* Adjust height to fit exactly 9 fields */
+opacity: 1;
+}
+
+.view-all, .view-less {
+  margin-top: 10px;
+  color: #0070f3;
+  font-size: 14px;
+  cursor: pointer;  
+}
+
+.buttons {
+  display: flex;
+  gap: 15px;
+  margin-top: 20px;
+  justify-content: center;
+}
+
+.btn {
+  padding: 12px 24px;
+  border: none;
+  border-radius: 8px;
+  background-color: rgb(84 0 200);
+  color: #ffffff;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.btn:hover {
+  background-color: rgb(65 31 111);
+  transform: scale(1);
+  box-shadow: "0 4px 8px rgba(0, 0, 0, 0.1)";
+}
+
+.btn:active{
+transform: scale(0.95);
+box-shadow: "0 2px 4px rgba(0, 0, 0, 0.2)";
+}
+
+.btn:disabled{
+  transform: scale(1.05);
+  box-shadow: "0 8px 16px rgba(0, 0, 0, 0.2)";
+}
+.field-card.hidden .career-card.hidden {
+  display: none;
+}
+
+div#moreFieldsBtn, div#moreCareersBtn {
+  display: flex;
+  justify-content: center;
+}

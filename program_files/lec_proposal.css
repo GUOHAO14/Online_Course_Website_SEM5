@@ -1,0 +1,200 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+}
+
+.create_proposal {
+  max-width: 900px;
+  margin: 40px auto;
+  background-color: rgba(255, 255, 255, 0.95);
+  padding: 30px;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+.title {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 30px;
+}
+
+.title_text {
+  margin: 0;
+  font-size: 28px;
+  color: #333;
+}
+
+.back {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 8px;
+  background-color: rgb(84 0 200);
+  color: #ffffff;
+  font-size: 14px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.back:hover {
+  background-color: rgb(65 31 111);
+  transform: scale(1.02);
+}
+
+.back:active{
+  transform: scale(0.95);
+  box-shadow: "0 2px 4px rgba(0, 0, 0, 0.2)";
+}
+
+.back:disabled{
+  transform: scale(1.05);
+  box-shadow: "0 8px 16px rgba(0, 0, 0, 0.2)";
+}
+
+.proposal {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.input_title1, .input_title2, .input_title3 {
+  font-weight: bold;
+  color: #555;
+  margin-bottom: 6px;
+}
+
+input[type="text"],
+input[type="number"],
+select,
+textarea {
+  padding: 10px;
+  font-size: 15px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.selection_area {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.completion_time_area {
+  flex: 1;
+  min-width: 200px;
+}
+
+.course_title_area, .cover_img_area {
+  margin-bottom: 15px;
+}
+
+.insert_field {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  padding: 10px;
+  background-color: #f7f7f7;
+  border-radius: 8px;
+}
+
+.field_tag {
+  background-color: #e0f4ff;
+  padding: 6px 12px;
+  border-radius: 20px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 14px;
+}
+
+.field_tag:hover {
+  background-color: #cce7fa;
+}
+
+.remove_field {
+  cursor: pointer;
+  color: red;
+  font-weight: bold;
+}
+
+div.proposal_btn {
+  margin-top: 30px;
+  margin-left: auto;
+  display: flex;
+  flex-direction: row;
+  gap: 8px;
+}
+
+.submit_proposal_btn {
+  background-color: rgb(84 0 200);
+  color: #fff;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 8px;
+  font-size: 14px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.submit_proposal_btn2 {
+  margin-top: 30px;
+  align-self: flex-end;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  background-color: rgb(84 0 200);
+  color: #fff;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 8px;
+  font-size: 14px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.submit_proposal_btn:hover, .submit_proposal_btn2:hover {
+  background-color: rgb(65 31 111);
+  transform: scale(1.02);
+}
+
+.submit_proposal_btn:active, .submit_proposal_btn2:active{
+  transform: scale(0.95);
+  box-shadow: "0 2px 4px rgba(0, 0, 0, 0.2)";
+}
+
+.submit_proposal_btn:disabled, .submit_proposal_btn2:disabled{
+  transform: scale(1.05);
+  box-shadow: "0 8px 16px rgba(0, 0, 0, 0.2)";
+}
+
+.editor_box {
+  margin-top: 10px;
+}
+
+img.cover_image {
+  width: 400px;
+  height: 200px;
+  margin: 0px auto;
+}
+
+
+@media (max-width: 600px) {
+  .create_proposal {
+    padding: 20px;
+  }
+
+  .selection_area {
+    flex-direction: column;
+  }
+
+  .submit_proposal_btn {
+    width: 100%;
+    justify-content: center;
+  }
+}

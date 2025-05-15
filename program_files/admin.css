@@ -1,0 +1,919 @@
+.modal {
+    position: fixed;
+    z-index: 999;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0,0,0,0.4);
+    display: none; /* hide by default */
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .modal-content {
+    background-color: #fff;
+    padding: 20px;
+    width: 400px;
+    max-width: 90%;
+    border-radius: 8px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+    position: relative;
+  }
+  
+.modal-content2 {
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+  position: relative;
+}
+
+  .fixed-textarea {
+    width: 400px;
+    height: 100px;
+    resize: none;
+}
+.modal-content button {
+  margin: 5px;
+  padding: 6px 12px;
+  cursor: pointer;
+}
+.hidden-row { display: none; }
+.modal {
+    display: none; position: fixed; z-index: 999;
+    left: 0; top: 0; width: 100%; height: 100%;
+    background-color: rgba(0,0,0,0.5); justify-content: center; align-items: center;
+}
+.modal-content {
+    background: #fff; padding: 20px; border-radius: 10px;
+    width: 300px; text-align: center;
+}
+
+textarea.fixed-textarea { resize: none; width: 100%; height: 80px; }
+table { margin-bottom: 30px; }
+.error-message {
+    color: red;
+    font-size: 14px;
+    margin-top: 10px;
+}
+
+/* ADMIN PROPOSAL */
+/* Base Styles */
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f5f5f5;
+}
+
+.main-content {
+  margin-left: 250px; /* Adjust based on sidebar width */
+  padding: 20px;
+}
+
+h2 {
+  color: #333;
+  margin-bottom: 20px;
+  font-size: 35px;
+}
+
+
+/* General Table Styling */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 20px 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+th, td {
+    padding: 12px 15px;
+    border-bottom: 1px solid #e0e0e0;
+    text-align: center;
+    vertical-align: middle;
+}
+
+th {
+    background-color: #5400C8;
+    color: white;
+    font-weight: 600;
+    text-transform: uppercase;
+    font-size: 0.85em;
+    letter-spacing: 0.5px;
+}
+
+/* Button Styling */
+button {
+    padding: 8px 15px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-weight: 500;
+    transition: all 0.3s ease;
+    white-space: nowrap;
+    margin: 0 auto;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+.viewStuBtn {
+  background-color: #65d292;
+}
+button:hover {
+  background-color: #27ae60;
+}
+
+button[onclick*="Approve"] {
+    background-color: #2ecc71;
+    color: white;
+}
+/* approve hover */
+button[onclick*="Approve"]:hover {
+  background-color: #27ae60; /* Darker green */
+}
+
+button[onclick*="Reject"] {
+    background-color: #e74c3c;
+    color: white;
+}
+/* reject hover */
+button[onclick*="Reject"]:hover {
+  background-color: #c0392b; /* Darker red */
+}
+
+button[type='button']:not([onclick]), .viewProposalBtn {
+    background-color: #5400C8;
+    color: white;
+}
+/* view hover */
+button[type='button']:not([onclick]):hover, .viewProposalBtn:hover {
+  background-color: #4500a8; 
+}
+
+button[onclick*="showRemovalPrompt"]{
+  background-color: #e73c3c;
+  color: white;
+}
+/* remove hover */
+button[onclick*="showRemovalPrompt"]:hover {
+  background-color: #c0392b; /* Darker red */
+}
+
+button[onclick*="openRemoveModal"]{
+  background-color: #e74c3c;
+  color: white;
+}
+/* ban hover */
+button[onclick*="openRemoveModal"]:hover{
+  background-color: #c0392b;
+}
+
+.viewLecBtn {
+  background-color: #dfdf60;
+}
+
+.viewLecBtn:hover {
+  background-color: #b8b83e;
+}
+/* Modal Backdrop */
+.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: none;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+/* Modal Content Box */
+.modal-content {
+  background-color: white;
+  border-radius: 8px;
+  padding: 25px;
+  width: 90%;
+  max-width: 400px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+  text-align: center;
+}
+
+/* Modal Text */
+.modal-content p {
+  font-size: 1.1rem;
+  color: #333;
+  margin-bottom: 25px;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* Modal Form */
+.modal-content form {
+  display: flex;
+  justify-content: center;
+  gap: 12px;
+}
+
+/* Modal Buttons */
+.modal-content button {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-weight: 500;
+  transition: all 0.2s ease;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* Approve Modal Specific Styles */
+#approveModal .modal-content ,
+#confirmModal .modal-content{
+  border-top: 4px solid #2ecc71;
+}
+
+#approveModal button[type="submit"] {
+  background-color: #2ecc71;
+  color: white;
+}
+
+#approveModal button[type="submit"]:hover {
+  background-color: #27ae60;
+}
+
+#approveModal button[onclick*="submitApproval"] {
+  background-color: #2ecc71;
+  color: white;
+}
+
+#approveModal button[onclick*="submitApproval"]:hover {
+  background-color: #27ae60;
+}
+
+#confirmModal button[onclick*="confirmUnban"]{
+  background-color: #2ecc71;
+  color: white;
+}
+
+#confirmModal button[onclick*="confirmUnban"]:hover {
+  background-color: #27ae60;
+}
+
+/* Reject Modal Specific Styles */
+#rejectModal .modal-content {
+  border-top: 4px solid #e74c3c;
+}
+
+#rejectModal button[type="submit"] {
+  background-color: #e74c3c;
+  color: white;
+}
+
+#rejectModal button[type="submit"]:hover {
+  background-color: #c0392b;
+}
+
+/* Cancel Button (Shared) */
+.modal-content button[type="button"] {
+  background-color: #f1f1f1;
+  color: #333;
+}
+
+.modal-content button[type="button"]:hover {
+  background-color: #e0e0e0;
+}
+
+/* Animation when opening */
+.modal.active {
+  display: flex;
+  animation: fadeIn 0.3s;
+}
+
+/* Reject Modal (Lecturer) */
+#rejectModal .modal-content {
+  border-top: 4px solid #e74c3c;
+  padding: 25px;
+  width: 90%;
+  max-width: 400px;
+}
+
+#rejectModal  .modal-content p {
+  font-size: 1.1rem;
+  color: #333;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+#rejectModal .modal-content button {
+  padding: 10px 20px;
+  margin: 0 10px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-weight: 500;
+  transition: all 0.2s ease;
+}
+
+#rejectModal .modal-content textarea {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  width: 90%;
+  padding: 12px;
+  margin: 15px 0;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  resize: none;
+  height: 100px;
+  font-size: 0.95rem;
+  line-height: 1.5;
+}
+
+#rejectModal .modal-content textarea::placeholder {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color: #999;
+}
+
+
+#rejectModal .modal-content button[onclick*="submitRejection"] {
+  background-color: #e74c3c;
+  color: white;
+}
+
+#rejectModal .modal-content button[onclick*="submitRejection"]:hover {
+  background-color: #c0392b;
+}
+
+#rejectModal .modal-content button[type="button"] {
+  background-color: #f1f1f1;
+  color: #333;
+}
+
+#rejectModal .modal-content button[type="button"]:hover {
+  background-color: #e0e0e0;
+}
+
+
+#rejectModal.modal {
+  animation: fadeIn 0.3s;
+}
+
+#rejectModal .modal-content {
+  animation: slideIn 0.3s;
+}
+
+/* Removal modal */
+#removalModal .modal-content {
+  border-top: 4px solid #e74c3c;
+  padding: 25px;
+  width: 90%;
+  max-width: 400px;
+}
+
+#removalModal  .modal-content p {
+  font-size: 1.1rem;
+  color: #333;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+#removalModal .modal-content button {
+  padding: 10px 20px;
+  margin: 0 10px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-weight: 500;
+  transition: all 0.2s ease;
+}
+
+#removalModal .modal-content textarea {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  width: 90%;
+  padding: 12px;
+  margin: 15px 0;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  resize: none;
+  height: 100px;
+  font-size: 0.95rem;
+  line-height: 1.5;
+}
+
+#removalModal .modal-content textarea::placeholder {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color: #999;
+}
+
+
+#removalModal .modal-content button[onclick*="submitRemoval"] {
+  background-color: #e74c3c;
+  color: white;
+}
+
+#removalModal .modal-content button[onclick*="submitRemoval"]:hover {
+  background-color: #c0392b;
+}
+
+#removalModal .modal-content button[type="button"] {
+  background-color: #f1f1f1;
+  color: #333;
+}
+
+#removalModal .modal-content button[type="button"]:hover {
+  background-color: #e0e0e0;
+}
+
+
+#removalModal.modal {
+  animation: fadeIn 0.3s;
+}
+
+#removalModal .modal-content {
+  animation: slideIn 0.3s;
+}
+
+#removalModal .modal-content {
+  border-top: 4px solid #e74c3c;
+  padding: 25px;
+  width: 90%;
+  max-width: 400px;
+}
+
+#removalModal  .modal-content p {
+  font-size: 1.1rem;
+  color: #333;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+#removalModal .modal-content button {
+  padding: 10px 20px;
+  margin: 0 10px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-weight: 500;
+  transition: all 0.2s ease;
+}
+
+#removalModal .modal-content textarea {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  width: 90%;
+  padding: 12px;
+  margin: 15px 0;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  resize: none;
+  height: 100px;
+  font-size: 0.95rem;
+  line-height: 1.5;
+}
+
+#removalModal .modal-content textarea::placeholder {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color: #999;
+}
+
+
+#removalModal .modal-content button[onclick*="submitRemoval"] {
+  background-color: #e74c3c;
+  color: white;
+}
+
+#removalModal .modal-content button[onclick*="submitRemoval"]:hover {
+  background-color: #c0392b;
+}
+
+#removalModal .modal-content button[type="button"] {
+  background-color: #f1f1f1;
+  color: #333;
+}
+
+#removalModal .modal-content button[type="button"]:hover {
+  background-color: #e0e0e0;
+}
+
+
+#removalModal.modal {
+  animation: fadeIn 0.3s;
+}
+
+#removalModal .modal-content {
+  animation: slideIn 0.3s;
+}
+
+/* Remove Modal */
+#removeModal .modal-content {
+  border-top: 4px solid #e74c3c;
+  padding: 25px;
+  width: 90%;
+  max-width: 400px;
+}
+
+#removeModal  .modal-content p {
+  font-size: 1.1rem;
+  color: #333;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+#removeModal .modal-content button {
+  padding: 10px 20px;
+  margin: 0 10px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-weight: 500;
+  transition: all 0.2s ease;
+}
+
+#removeModal .modal-content textarea {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  width: 90%;
+  padding: 12px;
+  margin: 15px 0;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  resize: none;
+  height: 100px;
+  font-size: 0.95rem;
+  line-height: 1.5;
+}
+
+#removeModal .modal-content textarea::placeholder {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color: #999;
+}
+
+
+#removeModal .modal-content button[onclick*="submitRemoval"] {
+  background-color: #e74c3c;
+  color: white;
+}
+
+#removeModal .modal-content button[onclick*="submitRemoval"]:hover {
+  background-color: #c0392b;
+}
+
+#removeModal .modal-content button[type="button"] {
+  background-color: #f1f1f1;
+  color: #333;
+}
+
+#removeModal .modal-content button[type="button"]:hover {
+  background-color: #e0e0e0;
+}
+
+
+#removeModal.modal {
+  animation: fadeIn 0.3s;
+}
+
+#removeModal .modal-content {
+  animation: slideIn 0.3s;
+}
+
+/* Confirmation Modal */
+#confirmationModal .modal-content {
+  border-top: 4px solid #e74c3c;
+  padding: 25px;
+  width: 90%;
+  max-width: 400px;
+}
+
+#confirmationModal .modal-content button[onclick*="confirmAction"]:hover {
+  background-color: #e74c3c;
+  color: white;
+}
+
+#removeModal.modal {
+  animation: fadeIn 0.3s;
+}
+
+#removeModal .modal-content {
+  animation: slideIn 0.3s;
+}
+
+/* Modal Container */
+/* Modal Container - Unified for all modals */
+.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0,0,0,0.5);
+  display: none;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+  animation: fadeIn 0.3s ease-out;
+}
+
+/* Main Modal Content - Updated to match removalModal */
+#modal .modal-content {
+  background-color: white;
+  width: 90%;
+  max-width: 400px;
+  border-radius: 12px;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+  overflow: hidden;
+  transform: translateY(0);
+  border-top: 4px solid #5400C8; /* Purple accent */
+  padding: 25px;
+  animation: slideIn 0.3s;
+  text-align: center;
+}
+
+/* Modal Header */
+#modal .modal-content p#modalTitle {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: #333;
+  margin: 0 0 20px 0;
+  padding: 0;
+  text-align: center;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* Modal Form */
+#modal .modal-content form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  align-items: center;
+}
+
+/* Form Inputs - Unified styling */
+#modal .modal-content input[type="text"],
+#modal .modal-content textarea {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  font-size: 0.95rem;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  transition: border-color 0.3s;
+}
+
+#modal .modal-content textarea.fixed-textarea {
+  height: 120px;
+  width: 90%;
+  max-width: 400px;
+}
+
+/* Button Container */
+#modal .modal-content .button-group {
+  display: flex;
+  justify-content: flex-end;
+  gap: 10px;
+  margin-top: 20px;
+}
+
+/* Modal Buttons - Unified styling */
+#modal .modal-content button {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 4px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* Approve Button */
+#modal .modal-content button[onclick="submitEntry()"] {
+  background-color: #5400C8; /* Changed to purple to match theme */
+  color: white;
+}
+
+#modal .modal-content button[onclick="submitEntry()"]:hover {
+  background-color: #3a008f;
+}
+
+/* Cancel Button */
+#modal .modal-content button[onclick="closeModal()"] {
+  background-color: #f1f1f1;
+  color: #333;
+}
+
+#modal .modal-content button[onclick="closeModal()"]:hover {
+  background-color: #e0e0e0;
+}
+
+/* Error Message */
+#modal .modal-content #errorMessage {
+  color: #e74c3c;
+  font-size: 0.9rem;
+  margin-top: 10px;
+  text-align: center;
+}
+
+/* Animations */
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes slideIn {
+  from { 
+    transform: translateY(-20px);
+    opacity: 0;
+  }
+  to { 
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+/* Responsive Adjustments */
+@media (max-width: 600px) {
+  #modal .modal-content {
+    width: 95%;
+    padding: 20px;
+  }
+  
+  #modal .modal-content .button-group {
+    flex-direction: column;
+  }
+  
+  #modal .modal-content button {
+    width: 100%;
+  }
+}
+
+
+/* Cancel Modal */
+#approveModal .modal-content button[type="button"]:hover,
+#rejectModal .modal-content button[type="button"]:hover,
+#removalModal .modal-content button[type="button"]:hover,
+#confirmationModal .modal-content button[onclick*="closeModal"]:hover,
+#confirmModal .modal-content button[onclick*="closeModal"]:hover,
+#successModal .modal-content button[onclick*="closeSuccessModal"]:hover,
+#removeModal .modal-content button[onclick*="closeRemoveModal"]:hover {
+    background-color: #e0e0e0; /* Dark gray */
+    color: #333;
+}
+
+/* confirmRemove */
+button[onclick*="confirmRemove"] {
+  background-color: #e74c3c;
+    color: white;
+}
+/* confirmRemove hover */
+button[onclick*="confirmRemove"]:hover {
+  background-color: #c0392b; /* Darker red */
+}
+
+#careerSeeMoreRow button,
+#careerSeeLessRow button,
+#fieldSeeMoreRow button,
+button[onclick*="view_id"], 
+#fieldSeeLessRow button{
+  background-color: #5400C8;
+  color: white;
+}
+
+#careerSeeMoreRow button:hover,
+#careerSeeLessRow button:hover,
+#fieldSeeMoreRow button:hover,
+button[onclick*="view_id"]:hover,
+#fieldSeeLessRow button:hover{
+  background-color: #4500a8;
+}
+
+#careerTable tr:last-child button,
+#fieldTable tr:last-child button {
+  background-color: #e0e0e0;
+  color:#333;
+}
+
+#careerTable tr:last-child button:hover,
+#fieldTable tr:last-child button:hover{
+  background-color: #cbcaca;
+}
+
+table button[onclick*="openModal"] {
+  background-color: #e74c3c;
+  color: white;
+}
+table button[onclick*="openModal"]:hover {
+  background-color: #c0392b;
+}
+
+/* Search Form - No Spacing */
+form[method="GET"] {
+  display: flex;
+  margin: 20px 0;
+  gap: 10px;
+}
+
+/* Search Input - Connected to buttons */
+form[method="GET"] input[type="text"] {
+  padding: 10px 15px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  width: 300px;
+  font-family: 'Segoe UI', Tahoma, sans-serif;
+  outline: none;
+}
+
+/* Search Button - Middle connector */
+form[method="GET"] button[type="submit"] {
+  padding: 10px 20px;
+  border: 1px solid #5400C8;
+  background-color: #5400C8;
+  color: white;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+/* Reset Button - Right end */
+form[method="GET"] button[type="button"] {
+  padding: 10px 20px;
+  border: 1px solid #ddd;
+  background-color: #e7e7e7;
+  border-radius: 0 4px 4px 0;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+/* Hover States */
+form[method="GET"] button[type="submit"]:hover {
+  background-color: #4500a8;
+  border-color: #4500a8;
+}
+
+form[method="GET"] button[type="button"]:hover {
+  background-color: #cecece;
+}
+
+/* Remove default button styling */
+form[method="GET"] button {
+  margin: 0;
+}
+
+
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+  form[method="get"] {
+      justify-content: flex-start;
+      overflow-x: auto;
+      padding: 10px 15px;
+      -webkit-overflow-scrolling: touch;
+  }
+  
+  form[method="get"] button[type="submit"] {
+      padding: 8px 15px;
+      font-size: 0.9rem;
+      white-space: nowrap;
+  }
+}
+
+
+/* Responsive Design */
+@media (max-width: 600px) {
+  form[method="GET"] {
+      flex-direction: column;
+      align-items: stretch;
+  }
+  
+  form[method="GET"] input[type="text"] {
+      max-width: 100%;
+  }
+  
+  form[method="GET"] button {
+      width: 100%;
+  }
+}
+
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+.modal-content {
+  animation: slideIn 0.3s;
+}
+
+@keyframes slideIn {
+  from { transform: translateY(-20px); }
+  to { transform: translateY(0); }
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+    .button-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    button {
+        width: 100%;
+        margin: 4px 0;
+    }
+}
