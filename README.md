@@ -12,7 +12,7 @@ Similar to the quiz publishing website that I have developed in my diploma semes
 
 
 # Project Scope and Assumptions (How It Works)
-### Scope
+## Scope
 1.	Create a website that are compatible with desktop and mobile usage (responsive web design).
 Note: unfortunately, due to time constraints, not all pages are fully-responsive.
 
@@ -25,14 +25,14 @@ Note: unfortunately, due to time constraints, not all pages are fully-responsive
 9.	Website administrators (admin) have the authority to perform CRUD (create, read, update, delete) action across multiple aspects of the website intended for operations management.
 10.	Each user type (role) has their respective user interface.
 
-### Assumptions
+## Assumptions
 1.	Users who are applying to become a course creator will need to submit a resume and relevant documents to be approved by admins in order to start publishing courses on the website. Said documents can include proof of academic qualification, teaching certification, portfolio or other documentation that can demonstrate the expertise of the user.
 2.	Admin of the website is presumably knowledgeable in verifying course creator applicant’s resume and qualification proofs. This also includes being able to identify fraudulent documents. 
 3.	Each user can only submit course creator application one time per day to prevent spam.
 4.	The e-learning platform will be locally hosted, which means it is not accessible with a public domain name. 
 
-### How to Use
-#### 1. MySQL Database Import
+## How to Use
+### 1. MySQL Database Import
 Download the sql file, *cocdb_database.sql*. Then, import it directly into XAMPP (phpMyAdmin) database. The database import can be done after typing 'localhost/phpmyadmin' to visit phpMyAdmin page (alternatively, click 'Admin' in XAMPP control panel). Once successful, a database with the name "morningkdb" will be created and used. The connection would then be established by opening XAMPP control panel and activating (click 'Start') on two modules - Apache and MySQL.
 
 #### 2. Project Folder Placement in htdocs
