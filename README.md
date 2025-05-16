@@ -33,7 +33,7 @@ Note: unfortunately, due to time constraints, not all pages are fully-responsive
 
 ## How to Use
 ### 1. MySQL Database Import
-Download the sql file, *cocdb_database.sql*. Then, import it directly into XAMPP (phpMyAdmin) database. The database import can be done after typing 'localhost/phpmyadmin' to visit phpMyAdmin page (alternatively, click 'Admin' in XAMPP control panel). Once successful, a database with the name "morningkdb" will be created and used. The connection would then be established by opening XAMPP control panel and activating (click 'Start') on two modules - Apache and MySQL.
+Download the sql file, *cocdb_database.sql*. Then, import it directly into XAMPP (phpMyAdmin) database. The database import can be done after typing 'localhost/phpmyadmin' to visit phpMyAdmin page (alternatively, click 'Admin' in XAMPP control panel). Once successful, a database with the name "cocdb" will be created and used. The connection would then be established by opening XAMPP control panel and activating (click 'Start') on two modules - Apache and MySQL.
 
 #### 2. Project Folder Placement in htdocs
 Assuming that XAMPP is successfully installed, all the program files and folders is downloaded and contained in a parent folder (any name). After that, this particular parent folder is moved (or copy, paste) to the "htdocs" folder, which is a child folder of xampp folder. The xampp folder should have been automatically created after XAMPP installation and usually located in C drive. This, and alongside step 1, ensure that the php files can connect to XAMPP's MySQL server.
