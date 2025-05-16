@@ -1,7 +1,7 @@
 # Online Course Website (Customizable E-Learning Platform) - Overview
 This web project is an assignment for Capstone Project module in semester 5 of my diploma program at APU, which is also my final year project. My teammates include Kee Wen Yew, Joshua Liew Yi-Way, Ivan Chin Li Ming, Colwyn Pang, and Ann Wen Kai. The website created - Core of Courses, is a personalised e-learning platform that provides students with a wide variety of online IT courses. Personalisation is achievable by allowing student users to answer some questions (survey) related to their academic interests or preferences during sign-up. Therefore, our system can retrieve said information and utilise them to display relevant courses that closely match with the student's preferences. Our main intention in creating this platform is to have a place for undergraduate students to enhance their skills or learn new skills. Additionally, if student users find necessary, they can get in touch with lecturer users through our chat and forum functionalities to have a greater understanding of any particular course or IT domain. 
 
-Our project objectives include:
+**Our project objectives include:**
 - help students to improve on their studies or learn extra skills / knowledge on their own
 - promote independant learning and provide sufficient assistance in the self-learning process
 - enhance students' e-learning outcomes
@@ -43,7 +43,7 @@ Note: there is a *conn.php* file among the files that serves the purpose of esta
 #### 3. Password Hashing
 As a security implementation, all user passwords are hashed (encrypted) in the database. You can visit the user table in the database, and you will find that the values of the password columns are all giberrish. This is completely normal and intended. This means that even if the database is somehow intruded with brute force, the password are hidden, and impersonation attempts will not be successful. In relation to that, password can be reset by the user in his/her profile section.
 
-This is a list of usernames and passwords that can be used to log into the system:
+This is a list of usernames and passwords that can be used to log into the system (fictional users and non-existent emails):
 
 **Admin Accounts:** 
 - user: ivan@gmail.com, password: Ivan123.
