@@ -1,5 +1,5 @@
-# Online Course Website (Customizable E-Learning Platoform) - Overview
-This web project is an assignment for Capstone Project module in semester 5 of my diploma program at APU, which is also my final year project. My teammates include Kee Wen Yew, Joshua Liew Yi-Way, Ivan Chin Li Ming, Colwyn Pang, and Ann Wen Kai. The website created - Core of Courses, is a personalised e-learning platform that provides students with a wide variety of IT online courses. Personalisation is achievable by allowing student users to answer some questions (survey) related to their academic interests or preferences during sign-up. Therefore, our system can retrieve said information and utilise them to dictate the courses that would closely match with the student's preferences. Our main intention in creating this platform is to have a place for undergraduate students to enhance their skills or learn new skills. Additionally, if student users find necessary, they can get in touch with lecturer users through our chat and forum functionalities to have a greater understanding of any particular course or IT domain. 
+# Online Course Website (Customizable E-Learning Platform) - Overview
+This web project is an assignment for Capstone Project module in semester 5 of my diploma program at APU, which is also my final year project. My teammates include Kee Wen Yew, Joshua Liew Yi-Way, Ivan Chin Li Ming, Colwyn Pang, and Ann Wen Kai. The website created - Core of Courses, is a personalised e-learning platform that provides students with a wide variety of online IT courses. Personalisation is achievable by allowing student users to answer some questions (survey) related to their academic interests or preferences during sign-up. Therefore, our system can retrieve said information and utilise them to display relevant courses that closely match with the student's preferences. Our main intention in creating this platform is to have a place for undergraduate students to enhance their skills or learn new skills. Additionally, if student users find necessary, they can get in touch with lecturer users through our chat and forum functionalities to have a greater understanding of any particular course or IT domain. 
 
 Our project objectives include:
 - help students to improve on their studies or learn extra skills / knowledge on their own
@@ -8,7 +8,7 @@ Our project objectives include:
 - shape a platform that acts as a IT knowledge hub - users can enquire, discuss and share knowledge
 - foster networking and collaboration by enabling meaningful and insightful interactions
 
-Similar to the quiz publishing website that I have developed in my diploma semester 4, this project implements XAMPP as a local server for our locally-hosted project. The development has involved four programming / scripting languages - HTML, CSS, JavaScript and PHP. In order to retrieve data from XAMPP server, MySQL query language is used.
+Similar to the quiz publishing website that I have developed in my diploma semester 4, this is a locally-hosted project that implements XAMPP as a local server. The development has involved four programming / scripting languages - HTML, CSS, JavaScript and PHP. In order to retrieve data from XAMPP server, MySQL query language is used.
 
 
 # Project Scope and Assumptions (How It Works)
