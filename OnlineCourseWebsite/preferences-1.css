@@ -1,0 +1,195 @@
+h2 {
+  font-size: 1.8rem;
+  color: #333333;
+  margin-bottom: 0.7rem;
+  text-align: center;
+}
+
+.signup-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  transition: opacity 0.5s ease;
+  margin: 2.2rem auto;
+}
+.edu-selection {
+  background: #ffffff;
+  padding: 30px 40px 26px 40px;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  width: 100%;
+  max-width: 500px;
+  height: fit-content;
+}
+
+.edu-selection::-webkit-scrollbar {
+  width: 10px; 
+}
+
+.edu-selection::-webkit-scrollbar-track {
+  background: #f1f1f1; 
+  border-radius: 10px;
+}
+
+.edu-selection::-webkit-scrollbar-thumb {
+  background: #c1c1c1; 
+  border-radius: 10px;
+  transition: background 0.3s;
+}
+
+.edu-selection::-webkit-scrollbar-thumb:hover {
+  background: #a8a8a8; 
+}
+
+.option {
+  display: block;
+  border: 2px solid #d9d9d9;
+  border-radius: 25px;
+  padding: 15px 20px;
+  margin-bottom: 15px;
+  cursor: pointer;
+  background-color: #fafafa;
+  transition: all 0.3s ease;
+}
+.option:hover {
+  background-color: #e6f0ff;
+  border-color: #0052cc;
+}
+.option input {
+  margin-right: 12px;
+  transform: scale(1.2);
+}
+input[type="radio"] {
+  accent-color: #0052cc;
+}
+.buttons {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 30px;
+}
+button {
+  padding: 8px 22px;
+  border: none;
+  border-radius: 8px;
+  background-color: #0052cc;
+  color: #ffffff;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+button:hover {
+  background-color: #003d99;
+  transform: scale(1);
+  box-shadow: "0 4px 8px rgba(0, 0, 0, 0.1)";
+}
+
+button:active{
+  transform: scale(0.95);
+  box-shadow: "0 2px 4px rgba(0, 0, 0, 0.2)";
+}
+
+#detailsContainer, #lecturerDetailContainer {
+  display: grid;
+  grid-template-rows: max-content;
+  row-gap: 0.3rem;
+}
+
+#lecturerDetailContainer {
+  row-gap: 1rem;
+}
+
+.msgPW {
+  font-size: 0.82rem;
+  margin: 0.5rem;
+}
+
+#pwList {
+  font-size: 0.7rem;
+  text-align: start;
+}
+
+.signup-container:not(#detailSlide) {
+  display: none;
+}
+
+.pdfUploadLabel {
+  padding: 10px 20px;
+  background-color: #4caf50;
+  color: white;
+  cursor: pointer;
+  border-radius: 5px;
+  display: inline-block;
+  transition: transform 0.5s ease;
+}
+
+.uploadingMsg {
+  margin-top: 10px;
+  font-style: italic;
+  color: gray;
+}
+
+.pdfPreviewContainer {
+  margin-top: 15px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  height: 3rem;
+  min-height: fit-content;
+  border: 2px dashed grey;
+  border-radius: 10px;
+  padding: 10px;
+}
+
+.pdfPreviewBox {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 10px;
+  border: 1px solid #ccc;
+  background-color: #f9f9f9;
+  border-radius: 5px;
+  justify-content: space-between;
+  max-width: 100%;
+  position: relative;
+}
+
+.pdfPreviewBox img {
+  width: 2rem;
+  height: 2rem;
+}
+
+.pdfInfo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.removePdfBtn {
+  background: transparent;
+  border: none;
+  color: black;
+  font-size: 1.5rem;
+  cursor: pointer;
+  margin-left: auto;
+  border: none;
+}
+
+.pdfUploadContainer a {
+  text-decoration: none;
+  color: rgb(0, 0, 0);
+}
+
+#pdfName {
+  padding-left: 10px;
+}
+
+.pdfUploadLabel:hover {
+  background: green;
+  transform: scale(1.05);
+}
+
+.pdfUploadLabel:active {
+  transform: scale(0.95);
+}
+

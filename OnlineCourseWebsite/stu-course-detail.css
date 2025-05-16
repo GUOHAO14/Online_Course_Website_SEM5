@@ -1,0 +1,749 @@
+html {
+    scroll-behavior: smooth;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif, sans-serif;
+}
+
+body {
+    background-color: rgb(221, 221, 221);
+    font-size: 100%;
+}
+
+.whiteSectionBg {
+    background-color: white;
+    padding: 2.5rem 0;
+    margin: 0 0 2.5rem 0;
+}
+
+.contentSection {
+    width: 85%;
+    margin: auto;
+}
+
+#backButton {
+    width: fit-content;
+}
+
+#courseHeader {
+    height: 26rem;
+    display: grid;
+    grid-template-columns: 3fr 1fr 3fr;
+    column-gap: 2rem;
+    row-gap: 1.2rem;
+    margin-top: 2.5rem;
+}
+
+#courseTitle {
+    grid-column: 1 / 3;
+}
+
+#courseDescriptionContainer {
+    grid-column: 1 / 3;
+    text-align: justify;
+}
+
+#seeMoreButton {
+    text-decoration: none;
+    visibility: hidden;
+    color: rgb(0, 104, 240);
+    cursor: pointer;
+}
+
+.courseImgContainer {
+    grid-column: 3 / 4;
+    grid-row: 1 / 6;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.courseImg {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    background-color: white;
+    transition: 300ms transform ease-in-out;
+}
+
+#courseLecturer {
+    grid-column: 1 / 2;
+    display: flex;
+    align-items: center;
+}
+
+.lecturerIconContainer, .studentIconContainer {
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    border: 0.08rem solid black;
+    flex-shrink: 0;
+}
+
+.lecturerIconContainer {
+    margin-right: 0.7rem;
+    height: 2rem;
+    width: 2rem;
+}
+
+.studentIconContainer {
+    margin-right: 1.5rem;
+    height: 3rem;
+    width: 3rem;
+}
+
+.lecturerIcon {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    background-color: white;
+}
+
+.profileLink {
+    margin: 0 0.7rem 0 1rem;
+    width: fit-content;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    color: black;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+#courseEnrol {
+    grid-column: 2 / 3;
+    grid-row: 3 / 6;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#courseDate {
+    grid-column: 1 / 2;
+}
+
+#enrolCount {
+    grid-column: 1 / 2;
+}
+
+#courseDetails {
+    margin-top: 3rem;
+    padding: 2rem;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-auto-rows: 5rem;
+    column-gap: 3rem;
+    background-color: white;
+    box-shadow: 1px 1px 10px rgb(219, 219, 219), -1px -1px 10px rgb(219, 219, 219);
+}
+
+#courseFields {
+    margin-top: 2rem;
+    padding: 1.1rem 1.5rem 1.5rem 1.5rem;
+    min-height: 4rem;
+    height: fit-content;
+    width: 100%;
+    background-color: white;
+    box-shadow: 1px 1px 10px rgb(219, 219, 219), -1px -1px 10px rgb(219, 219, 219);
+}
+
+#topicList {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.topic {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: fit-content;
+    padding: 0.6rem 1.2rem;
+    border-radius: 0.7rem;
+    background-color: rgb(240, 240, 240);
+    border: 0.09rem solid rgb(233, 233, 233);
+    box-shadow: 1px 1px 5px rgb(219, 219, 219), -1px -1px 5px rgb(219, 219, 219);
+    transition: 0.3s;
+    margin: 1.5rem 1.5rem 0 0;
+}
+
+#courseDetails > div {
+    display: grid;
+    grid-template-rows: 3fr 5fr;
+    background-color: rgb(249, 249, 249);
+    border-radius: 0.8rem;
+    box-shadow: 1px 1px 5px rgb(219, 219, 219), -1px -1px 5px rgb(219, 219, 219);
+    transition: 0.3s;
+}
+
+#courseDetails > div:hover {
+    margin-top: -1rem;
+    margin-bottom: 1rem;
+}
+
+.topic:hover {
+    margin-top: -0.01rem;
+    margin-bottom: 0.01rem;
+}
+
+#courseDetails > div > div {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+    padding: 0 0.5rem;
+}
+
+.detailHeader {
+    border-radius: 0.8rem 0.8rem 0 0;
+    border-bottom: 0.08rem solid rgb(184, 184, 184);
+    background-color: rgb(84, 0, 200);
+    color: white;
+}
+
+#courseInfo {
+    width: 100%;
+    display: flex;
+}
+
+#infoSidebar {
+    height: fit-content;
+    width: 15%;
+    position: sticky;
+    top: 0;
+    box-shadow: -3px -3px 20px rgb(219, 219, 219);
+}
+
+#infoDisplay {
+    width: 85%;
+    padding: 0 3rem;
+}
+
+#courseName { /*in stu-all-reviews */
+    margin: 0;
+}
+
+.tablinks {
+    text-decoration: none;
+    color: black;
+    width: 100%;
+    background-color: rgb(248, 248, 248);
+    float: left;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    padding: 2rem 1rem;
+    transition: 0.3s;
+    border-bottom: 0.1rem solid rgb(184, 184, 184);
+}
+
+.tablinks:hover {
+    background-color: rgb(221, 221, 221);
+}
+
+.tablinks.active {
+    background-color: rgb(204, 204, 204);
+}
+
+.tabContent {
+    padding: 6px 12px;
+    margin-bottom: 3rem;
+    text-align: justify;
+}
+
+.tabContent > * {
+    animation: fadeEffect 1s; 
+}
+
+li {
+    margin: 1rem 0;
+}
+
+#ratingOverview {
+    background-color: rgb(255, 215, 250);
+    border: 0.1rem solid rgb(225, 228, 232);
+    padding: 2rem;
+    border-radius: 0.8rem;
+    box-shadow: 1px 1px 10px rgb(219, 219, 219), -1px -1px 10px rgb(219, 219, 219);
+    margin: 0 auto;
+    width: 100%;
+}
+
+#reviewCardList {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-auto-rows: max-content;
+    row-gap: 1.5rem;
+}
+
+.reviewCard {
+    display: grid;
+    grid-template-columns: 11fr 3fr 1fr;
+    grid-auto-rows: max-content;
+    grid-auto-columns: min-content;
+    row-gap: 1.5rem;
+    background-color: rgb(245, 247, 255);
+    border: 0.1rem solid rgb(225, 228, 232);
+    padding: 2rem;
+    border-radius: 0.8rem;
+    box-shadow: 1px 1px 5px rgb(219, 219, 219), -1px -1px 5px rgb(219, 219, 219);
+}
+
+.studentLink {
+    text-align: start;
+    display: flex;
+    cursor: pointer;
+    color: black;
+    font-weight: bold;
+    text-decoration: none;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    margin-right: 1rem;
+}
+
+.studentName {
+    font-size: 1.3rem;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    min-width: 0;
+    font-weight: bold;
+    margin: auto 0;
+}
+
+.more, .rating {
+    display: flex;
+    align-items: center;
+}
+
+.more {
+    justify-content: end;
+    position: relative;
+}
+
+.comment {
+    grid-column: 1 / 4;
+}
+
+.reviewTitle {
+    grid-column: 1 / 2;
+}
+
+.reviewDate {
+    grid-column: 2 / 4;
+    margin: auto 0;
+    text-align: end;
+}
+
+.moreButton:hover {
+    background-color: rgb(230, 230, 230);
+}
+
+.moreButton:active {
+    background-color: rgb(211, 214, 219);
+}
+
+.moreButton {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 2rem;
+    height: 2rem;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+.moreMenu {
+    position: absolute;
+    top: 2.5rem;
+    right: 0;
+    background-color: white;
+    border: 1px solid #ccc;
+    border-radius: 0.1rem;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    display: none;
+    z-index: 10;
+    width: fit-content;
+}
+
+.menuItem {
+    cursor: pointer;
+    white-space: nowrap;
+    padding: 1rem 2rem 1rem 1.5rem;
+}
+
+.menuItem:hover {
+    background-color: #f2f2f2;
+}
+
+.reviewBar {
+    height: 0.75rem;
+    background-color: rgb(255, 156, 18);
+    border: 0.05rem solid rgb(138, 138, 138);
+    margin: 0.2rem 0.4rem 0 0.4rem;
+    margin-top: 0.2rem;
+}
+
+#courseName {
+    margin: auto 0;
+}
+
+.courseProgress {
+    grid-column: 1 / 4;
+}
+
+.scoreBar {
+    width: 100%;
+    height: 0.9rem;
+    background-color: rgb(197, 197, 197);
+    border-radius: 1rem;
+    border: 0.1rem solid black;
+    overflow: hidden;
+    position: relative;
+    margin-right: 0.2rem;
+    margin-top: 0.2rem
+}
+ 
+.greenBar {
+    background-color: rgb(33, 241, 47);
+    height: 100%;
+}
+
+#reviewCommentInput {
+    font-size: 1rem;
+    padding: 0.6rem;
+    min-height: 3.2rem;
+    width: 100%;
+    resize: none; /*prevent manual dragging*/
+    overflow-y: hidden;
+    box-sizing: border-box;
+    border: none;
+    outline: 1px ridge rgb(84 0 200);
+}
+
+input {
+    padding: 0.6rem;
+    border: none;
+    outline: 1px ridge rgb(84 0 200);
+    text-wrap: wrap;
+}
+
+input:focus, #reviewCommentInput:focus {
+    outline: 3px ridge rgb(84 0 200);
+}
+
+#createReview {
+    margin: auto;
+    width: 90%;
+    display: flex;
+    flex-direction: column;
+    background-color: rgb(233, 238, 255);;
+}
+
+#createReviewFooter, #createReviewHeader {
+    display: flex;
+    justify-content: space-between;
+}
+
+.ratingContainer {
+    width: fit-content;
+    margin: auto;
+    font-size: 2rem;
+    direction: rtl; /* flip star order for easy CSS logic */
+}
+
+.ratingContainer input {
+    font-size: 3rem;
+    display: none;
+}
+
+.ratingContainer label {
+    font-size: 3rem;
+    cursor: pointer;
+    color: rgb(204, 204, 204);
+    transition: color 0.2s;
+}
+
+/*highlight on hover*/
+.ratingContainer label:hover, .ratingContainer label:hover ~ label {
+    text-shadow: 2px 2px 6px rgb(255, 236, 129), -2px -2px 6px rgb(255, 236, 129);
+}
+
+/*highlight selected stars*/
+.ratingContainer input:checked ~ label {
+    color: gold;
+}
+
+#saveReviewBtn {
+    outline: 0.2rem outset rgb(212, 0, 255);
+}
+
+#saveReviewBtn:hover {
+    outline: 0.2rem ridge rgb(212, 0, 255);
+}
+
+button#enrolButton, button#backButton{
+    font-weight: bold;
+}
+
+.purpleBtn {
+    width: fit-content;
+    padding: 0.7rem 1.4rem;
+    border: none;
+    border-radius: 0.4rem;
+    background-color: rgb(84, 0, 200);
+    color: #ffffff;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: all 0.3s ease; /* animate everything */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+/* Hover effect */
+.purpleBtn:hover {
+    background-color: rgb(65, 31, 111);
+    transform: scale(1.05);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.purpleBtn:active {
+    background-color: rgb(84, 0, 200);
+    transform: scale(1);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Press effect */
+button:focus {
+    transform: scale(0.95);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+@media screen and (max-width: 1000px) {
+    .contentSection {
+        width: 90%;
+    }
+}
+
+@media screen and (max-width: 856px) {
+    body {
+        font-size: 90%;
+    }
+
+    .contentSection {
+        width: 95%;
+    }
+
+    .studentIconContainer {
+        margin-right: 1rem;
+        height: 2.6rem;
+        width: 2.6rem;
+    }
+
+    .reviewCard {
+        padding: 1.5rem;
+    }
+}
+
+@media screen and (max-width: 756px) {
+    body {
+        font-size: 80%;
+    }
+
+    .tablinks {
+        padding: 1.3rem 1rem;
+    }
+
+    #ratingOverview {
+        padding: 1.5rem;
+    }
+}
+
+@media screen and (max-width: 720px) {
+    .contentSection {
+        width: 95%;
+    }
+
+    #infoDisplay {
+        padding: 0 0.5rem;
+    }
+
+    #courseHeader {
+        height: fit-content;
+        grid-template-columns: 5fr 2.5fr;
+        column-gap: 1rem;
+        row-gap: 1rem;
+        margin-top: 2.5rem;
+    }
+
+    #courseProgress {
+        grid-column: 1 / 3;
+        grid-row: 1;
+    }
+
+    #courseTitle {
+        grid-column: 1 / 3;
+        grid-row: 2;
+    }
+
+    .courseImgContainer {
+        grid-column: 1 / 3;
+        grid-row: 3;
+        height: 21rem;
+    }
+
+    #courseEnrol {
+        grid-row: 5 / 8;
+    }
+
+    #courseDetails {
+        column-gap: 1.5rem;
+    }
+
+    .menuItem {
+        padding: 0.7rem 1.4rem 0.7rem 1rem;
+    }
+}
+
+@media screen and (max-width: 623px) {
+    #courseInfo {
+        flex-direction: column;
+    }
+
+    #infoSidebar {
+        display: flex;
+        width: unset;
+        margin-bottom: 2rem;
+    }
+
+    .tablinks {
+        align-items: center;
+        display: flex;
+        justify-content: center;
+        border-right: 0.1rem solid rgb(184, 184, 184);
+        border-bottom: none;
+    }
+
+    #infoDisplay {
+        width: unset;
+    }
+
+    #ratingOverview {
+        padding: 1rem;
+    }
+}
+
+@media screen and (max-width: 520px) {
+    .courseImgContainer {
+        height: 17rem;
+    }
+
+    #courseDetails {
+        column-gap: 0.75rem;
+        padding: 1rem;
+    }
+
+    #courseFields {
+        padding: 0.75rem 1rem 1rem 1rem;
+    }
+
+    .topic {
+        padding: 0.3rem 0.6rem;
+        margin: 0.75rem 0.75rem 0 0;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    body {
+        font-size: 70%;
+    }
+
+    .studentIconContainer {
+        margin-right: 1rem;
+        height: 2rem;
+        width: 2rem;
+    }
+
+    .studentName {
+        font-size: 16px;
+    }
+
+    .reviewCard {
+        grid-template-columns: 10fr 8fr 1.2fr;
+        padding: 0.75rem;
+    }
+
+    .studentLink {
+        grid-column: 1 / 3;
+        grid-row: 1;
+        margin-right: 0.3rem;
+    }
+
+    .more {
+        grid-column: 3 / 4;
+        grid-row: 1;
+    }
+
+    .rating {
+        grid-column: 1 / 2;
+        grid-row: 2;
+    }
+
+    .reviewDate {
+        grid-column: 2 / 4;
+        grid-row: 2;
+        text-align: end;
+    }
+
+    .reviewTitle {
+        grid-column: 1 / 4;
+        grid-row: 3;
+    }
+
+    .tablinks {
+        padding: 0.25rem 0.25rem;
+        border-right: 0.05rem solid rgb(184, 184, 184);
+    }
+
+    #ratingOverview {
+        padding: 1rem;
+    }
+
+    .moreButton {
+        width: 1.2rem;
+        height: 1.2rem;
+    }
+    
+    .moreMenu {
+        top: 1.5rem;
+    }
+
+    .menuItem {
+        padding: 0.5rem 1rem 0.5rem 0.8rem;
+    }
+}
+
+@media screen and (max-width: 370px) {
+    body {
+        font-size: 65%;
+    }
+
+    .courseImgContainer {
+        height: 12.5rem;
+    }
+
+    #courseDetails {
+        column-gap: 0.3rem;
+        padding: 0.5rem;
+    }
+
+    #ratingOverview {
+        padding: 0.6rem;
+    }
+}

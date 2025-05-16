@@ -1,0 +1,180 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    height: 100%;
+}
+
+main {
+    display: flex;
+    flex-direction: row;
+    min-height: 100vh;
+}
+
+section.sidebar {
+    width: 15%;
+    background-color: #fff;
+    border-right: 1px solid #ddd;
+    padding: 20px;
+    box-shadow: 2px 0 10px rgba(0, 0, 0, 0.1);
+    height: auto;
+    display: flex;
+    flex-direction: column;
+}
+
+
+div.file, div.subfile {
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    border-bottom: 1px solid #ddd;
+    transition: background-color 0.3s ease, box-shadow 0.2s ease;
+}
+
+div.hide {
+    font-size: 20px;
+    cursor: pointer;
+    color: #007bff;
+    font-weight: bold;
+    margin-bottom: 20px;
+    display: flex;
+    align-items: center;
+}
+
+div.file:hover, div.subfile:hover {
+    background-color: #f1f1f1;
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+p.filename_side, p.subfilename_side {
+    padding: 15px;
+    color: black;
+    flex-grow: 1;
+}
+
+p.filename_side {
+    font-size: 22px;
+    margin-left: 10px;
+}
+
+p.subfilename_side {
+    font-size: 20px;
+    margin-left: 8px;
+}
+
+section.track_progression {
+    padding: 20px;
+    flex-grow: 1;
+    background-color: #e8f1f8;
+    height: 100%;
+    margin-bottom: 0;
+    display: flex;
+    flex-direction: column;
+}
+
+div.title {
+    display: flex;
+    flex-direction: row;
+}
+
+button {
+    padding: 12px 24px;
+    border: none;
+    border-radius: 8px;
+    background-color: rgb(84 0 200);
+    color: #ffffff;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: rgb(65 31 111);
+}
+
+button:active {
+    transform: scale(0.95);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+button:disabled {
+    transform: scale(1.05);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+div.progression_table_container {
+    overflow-y: auto;
+}
+
+tr {
+    font-size: 25px;
+    text-align: center;
+}
+
+img.hide{
+    margin-right: 0.5rem;
+}
+
+table.progression_table {
+    width: 100%;
+    border-collapse: collapse;
+    background-color: #ffffff;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+    border-radius: 12px;
+    overflow: hidden;
+    font-size: 16px;
+    margin-top: 20px;
+}
+
+table.progression_table thead {
+    background-color: #f0f4ff;
+    color: #333;
+    font-weight: 600;
+}
+
+table.progression_table th,
+table.progression_table td {
+    padding: 14px 20px;
+    text-align: left;
+    border-bottom: 1px solid #eaeaea;
+}
+
+table.progression_table tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+
+table.progression_table tr:hover {
+    background-color: #eef4ff;
+}
+
+table.progression_table td {
+    color: #444;
+}
+
+table.progression_table td:last-child {
+    font-weight: 500;
+}
+
+input.search_stu {
+    font-weight: bold;
+    width: auto;
+    padding: 12px;
+    font-size: 16px;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+    background-color: #f9f9f9;
+    transition: border-color 0.3s;
+}
+
+h1.title {
+    display: flex;
+    align-items: center;
+    margin-left: 1rem;
+}
+
+h2.subtitle{
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+}
