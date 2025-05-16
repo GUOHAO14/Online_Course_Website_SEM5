@@ -1,5 +1,7 @@
 # Online Course Website (Customizable E-Learning Platform) - Overview
-This web project is an assignment for Capstone Project module in semester 5 of my diploma program at APU, which is also my final year project. My teammates include Kee Wen Yew, Joshua Liew Yi-Way, Ivan Chin Li Ming, Colwyn Pang, and Ann Wen Kai. The website created - Core of Courses, is a personalised e-learning platform that provides students with a wide variety of online IT courses. Personalisation is achievable by allowing student users to answer some questions (survey) related to their academic interests or preferences during sign-up. Therefore, our system can retrieve said information and utilise them to display relevant courses that closely match with the student's preferences. Our main intention in creating this platform is to have a place for undergraduate students to enhance their skills or learn new skills. Additionally, if student users find necessary, they can get in touch with lecturer users through our chat and forum functionalities to have a greater understanding of any particular course or IT domain. 
+This web project is an assignment for Capstone Project module in semester 5 of my diploma program at APU, which is also my final year project. My teammates include Kee Wen Yew, Joshua Liew Yi-Way, Ivan Chin Li Ming, Colwyn Pang and Ann Wen Kai. Despite having some imperfections, I am very proud of what my team have achieved, especially due to the fact of having to complete the large scope of functionalities and requirements that we have set for ourselves. 
+
+The website created - Core of Courses, is a personalised e-learning platform that provides students with a wide variety of online IT courses. Personalisation is achievable by allowing student users to answer some questions (survey) related to their academic interests or preferences during sign-up. Therefore, our system can retrieve said information and utilise them to display relevant courses that closely match with the student's preferences. Our main intention in creating this platform is to have a place for undergraduate students to enhance their skills or learn new skills. Additionally, if student users find necessary, they can get in touch with lecturer users through our chat and forum functionalities to have a greater understanding of any particular course or IT domain. 
 
 **Our project objectives include:**
 - help students to improve on their studies or learn extra skills / knowledge on their own
@@ -10,6 +12,11 @@ This web project is an assignment for Capstone Project module in semester 5 of m
 
 Similar to the quiz publishing website that I have developed in my diploma semester 4, this is a locally-hosted project that implements XAMPP as a local server. The development has involved four programming / scripting languages - HTML, CSS, JavaScript and PHP. In order to retrieve data from XAMPP server, MySQL query language is used.
 
+---
+
+*Important: This repository is only intended solely for academic reference and personal learning. It should not be reused or resubmitted as original work under any circumstance. Unauthorized reproduction or misuse is strictly discouraged.*
+
+---
 
 # Project Scope and Assumptions (How It Works)
 ## Scope
@@ -18,12 +25,13 @@ Note: unfortunately, due to time constraints, not all pages are fully-responsive
 
 3.	The website is accessible using a browser, without needing to download any application.
 4.	Our e-learning platform specialises in providing educational courses related to IT fields such as computer science, data analytics, AI, etc. 
-5.	The e-learning platform customises its behaviour by allowing student users to choose the careers, fields and learning styles that suit their liking during profile setup. 
-6.	English will be the only available language and the standard for all course materials, and the same applies to the website’s language. 
-7.	The targeted student users are undergraduates who aspire to improving their IT skills, while the targeted course creators are certified lecturers from established universities. 
-8.	The targeted course creating users are tertiary education lecturers whose legitimacy and qualification are verified by website administrators.
-9.	Website administrators (admin) have the authority to perform CRUD (create, read, update, delete) action across multiple aspects of the website intended for operations management.
-10.	Each user type (role) has their respective user interface.
+5.	The e-learning platform customises its behaviour by allowing student users to choose the careers, fields and learning styles that suit their liking during profile setup.
+6.	The e-learning platforms provides a performance summary report for users to view their achievements in the website. 
+7.	English will be the only available language and the standard for all course materials, and the same applies to the website’s language. 
+8.	The targeted student users are undergraduates who aspire to improving their IT skills, while the targeted course creators are certified lecturers from established universities. 
+9.	The targeted course creating users are tertiary education lecturers whose legitimacy and qualification are verified by website administrators.
+10.	Website administrators (admin) have the authority to perform CRUD (create, read, update, delete) action across multiple aspects of the website intended for operations management.
+11.	Each user type (role) has their respective user interface.
 
 ## Assumptions
 1.	Users who are applying to become a course creator will need to submit a resume and relevant documents to be approved by admins in order to start publishing courses on the website. Said documents can include proof of academic qualification, teaching certification, portfolio or other documentation that can demonstrate the expertise of the user.
